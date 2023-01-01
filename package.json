@@ -1,0 +1,30 @@
+{
+  "name": "maplebot_models",
+  "version": "1.1.1",
+  "description": "paquete de npm que sirve para tener parte del codigo de maple bot aparte",
+  "main": "Sources/main.js",
+  "typings": "Sources/Models/Typings/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "cacao0027 <scherzodjs@gmail.com>",
+  "engines": {
+    "node": "^18.x"
+  },
+  "icon": "Sources/icon.png",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CacaoNk0027/mapleSchemas.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CacaoNk0027/mapleSchemas/issues"
+  },
+  "homepage": "https://github.com/CacaoNk0027/mapleSchemas#readme",
+  "dependencies": {
+    "discord.js": "^14.3.0",
+    "moment": "^2.29.4",
+    "mongoose": "^6.5.3"
+  }
+}
