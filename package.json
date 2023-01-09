@@ -1,30 +1,26 @@
 {
   "name": "maplebot_models",
-  "version": "1.1.1",
-  "description": "paquete de npm que sirve para tener parte del codigo de maple bot aparte",
-  "main": "Sources/main.js",
-  "typings": "Sources/Models/Typings/index.d.ts",
+  "version": "1.0.0",
+  "description": "paquete de npm para tener una parte del codigo de maple bot aparte",
+  "main": "sources/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "cacao0027 <scherzodjs@gmail.com>",
-  "engines": {
-    "node": "^18.x"
-  },
-  "icon": "Sources/icon.png",
+  "author": "CacaoNk0027 <scherzodjs@gmail.com>",
   "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.7.1",
+    "moment": "^2.29.4",
+    "mongoose": "^6.8.2"
+  },
+  "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CacaoNk0027/mapleSchemas.git"
+    "url": "git+https://github.com/CacaoNk0027/maplebot_models.git"
   },
   "bugs": {
-    "url": "https://github.com/CacaoNk0027/mapleSchemas/issues"
+    "url": "https://github.com/CacaoNk0027/maplebot_models/issues"
   },
-  "homepage": "https://github.com/CacaoNk0027/mapleSchemas#readme",
-  "dependencies": {
-    "discord.js": "^14.3.0",
-    "moment": "^2.29.4",
-    "mongoose": "^6.5.3"
-  }
+  "homepage": "https://github.com/CacaoNk0027/maplebot_models#readme"
 }

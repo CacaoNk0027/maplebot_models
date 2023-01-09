@@ -12,7 +12,7 @@ module.exports = {
      * @param {discord.GuildMember} member 
      */
     dates: function (member) {
-        return `🛎️ **A ${member.guild.name}**\n<t:${moment(member.joinedAt).unix()}:F>\n💬 **A Discord**\n<t${moment(member.user.createdAt).unix()}:F>`
+        return `🛎️ **A ${member.guild.name}**\n<t:${moment(member.joinedAt).unix()}:F>\n💬 **A Discord**\n<t:${moment(member.user.createdAt).unix()}:F>`
     }, 
     /**
      * @param {discord.GuildMember} member 
@@ -33,10 +33,10 @@ module.exports = {
             CertifiedModerator: "<:Dis_bg_verifiedMod:888236515526844448>"
         }
         var badges = member.user.flags.toArray().length >= 1 ? member.user.flags.toArray().map(flgs => userflags[flgs]).join(' ') : "Sin Insignias";
-        var boost = member.premiumSince ? "No esta bosteando el servidor" : `Boosteando ${member.guild.name} desde el <t:${moment(member.premiumSinceTimestamp).unix()}:F>`;
-        var img = member.user.avatar ? "Sin avatar": `[Avatar URL](${member.user.avatarURL({ forceStatic: false, size: 4096 })})`;
-        var guildAvatar = member.avatar ? "Sin avatar de servidor": `[GuildAvatar URL](${member.avatarURL({ forceStatic: false, size: 4096 })})`;
-        var banner = (await member.user.fetch()).banner ? "sin banner - banner no detectado":  `[Banner URL](${(await member.user.fetch()).bannerURL({ forceStatic: false, size: 4096 })})`
+        var boost = !member.premiumSince ? "No esta bosteando el servidor" : `Boosteando ${member.guild.name} desde el <t:${moment(member.premiumSinceTimestamp).unix()}:F>`;
+        var img = !member.user.avatar ? "Sin avatar": `[Avatar URL](${member.user.avatarURL({ forceStatic: false, size: 4096 })})`;
+        var guildAvatar = !member.avatar ? "Sin avatar de servidor": `[GuildAvatar URL](${member.avatarURL({ forceStatic: false, size: 4096 })})`;
+        var banner = !(await member.user.fetch()).banner ? "sin banner - banner no detectado":  `[Banner URL](${(await member.user.fetch()).bannerURL({ forceStatic: false, size: 4096 })})`
         return `- **Insignias**\n${badges}\n<:Dis_boostLv3:888234376226295878> **Boost |** ${boost}\n🌆 **Avatar |** ${img}\n🎩 **Avatar de Servidor |** ${guildAvatar}\n🖼 **Banner |** ${banner}`
     }
 }
